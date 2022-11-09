@@ -29,13 +29,33 @@ namespace Group13ATM
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.examplePush = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // examplePush
+            // 
+            this.examplePush.Location = new System.Drawing.Point(267, 176);
+            this.examplePush.Name = "examplePush";
+            this.examplePush.Size = new System.Drawing.Size(145, 112);
+            this.examplePush.TabIndex = 0;
+            this.examplePush.Text = "examplePush";
+            this.examplePush.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.examplePush);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button examplePush;
     }
 }
 
