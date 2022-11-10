@@ -29,24 +29,35 @@ namespace Group13ATM
         /// </summary>
         private void InitializeComponent()
         {
-            this.examplePush = new System.Windows.Forms.Button();
+            this.ATMBtn = new System.Windows.Forms.Button();
+            this.EmpLoginBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // examplePush
+            // ATMBtn
             // 
-            this.examplePush.Location = new System.Drawing.Point(267, 176);
-            this.examplePush.Name = "examplePush";
-            this.examplePush.Size = new System.Drawing.Size(145, 112);
-            this.examplePush.TabIndex = 0;
-            this.examplePush.Text = "examplePush";
-            this.examplePush.UseVisualStyleBackColor = true;
+            this.ATMBtn.Location = new System.Drawing.Point(309, 44);
+            this.ATMBtn.Name = "ATMBtn";
+            this.ATMBtn.Size = new System.Drawing.Size(145, 112);
+            this.ATMBtn.TabIndex = 0;
+            this.ATMBtn.Text = "ATM";
+            this.ATMBtn.UseVisualStyleBackColor = true;
+            // 
+            // EmpLoginBtn
+            // 
+            this.EmpLoginBtn.Location = new System.Drawing.Point(309, 209);
+            this.EmpLoginBtn.Name = "EmpLoginBtn";
+            this.EmpLoginBtn.Size = new System.Drawing.Size(145, 112);
+            this.EmpLoginBtn.TabIndex = 1;
+            this.EmpLoginBtn.Text = "Employee Login";
+            this.EmpLoginBtn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.examplePush);
+            this.Controls.Add(this.EmpLoginBtn);
+            this.Controls.Add(this.ATMBtn);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -55,7 +66,8 @@ namespace Group13ATM
 
         #endregion
 
-        private System.Windows.Forms.Button examplePush;
+        private System.Windows.Forms.Button ATMBtn;
+        private System.Windows.Forms.Button EmpLoginBtn;
     }
 }
 
