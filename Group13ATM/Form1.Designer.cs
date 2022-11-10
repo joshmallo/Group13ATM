@@ -35,27 +35,28 @@ namespace Group13ATM
             // 
             // ATMBtn
             // 
-            this.ATMBtn.Location = new System.Drawing.Point(309, 44);
+            this.ATMBtn.Location = new System.Drawing.Point(309, 45);
             this.ATMBtn.Name = "ATMBtn";
-            this.ATMBtn.Size = new System.Drawing.Size(145, 112);
+            this.ATMBtn.Size = new System.Drawing.Size(146, 112);
             this.ATMBtn.TabIndex = 0;
             this.ATMBtn.Text = "ATM";
             this.ATMBtn.UseVisualStyleBackColor = true;
             // 
             // EmpLoginBtn
             // 
-            this.EmpLoginBtn.Location = new System.Drawing.Point(309, 209);
+            this.EmpLoginBtn.Location = new System.Drawing.Point(309, 186);
             this.EmpLoginBtn.Name = "EmpLoginBtn";
-            this.EmpLoginBtn.Size = new System.Drawing.Size(145, 112);
+            this.EmpLoginBtn.Size = new System.Drawing.Size(146, 112);
             this.EmpLoginBtn.TabIndex = 1;
             this.EmpLoginBtn.Text = "Employee Login";
             this.EmpLoginBtn.UseVisualStyleBackColor = true;
+            this.EmpLoginBtn.Click += new System.EventHandler(this.EmpLoginBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.EmpLoginBtn);
             this.Controls.Add(this.ATMBtn);
             this.Name = "Form1";
