@@ -35,32 +35,29 @@ namespace Group13ATM
             // 
             // ATMBtn
             // 
-            this.ATMBtn.Location = new System.Drawing.Point(206, 29);
-            this.ATMBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ATMBtn.Location = new System.Drawing.Point(309, 45);
             this.ATMBtn.Name = "ATMBtn";
-            this.ATMBtn.Size = new System.Drawing.Size(97, 73);
+            this.ATMBtn.Size = new System.Drawing.Size(146, 112);
             this.ATMBtn.TabIndex = 0;
             this.ATMBtn.Text = "ATM";
             this.ATMBtn.UseVisualStyleBackColor = true;
             // 
             // EmpLoginBtn
             // 
-            this.EmpLoginBtn.Location = new System.Drawing.Point(46, 96);
-            this.EmpLoginBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.EmpLoginBtn.Location = new System.Drawing.Point(309, 221);
             this.EmpLoginBtn.Name = "EmpLoginBtn";
-            this.EmpLoginBtn.Size = new System.Drawing.Size(97, 73);
+            this.EmpLoginBtn.Size = new System.Drawing.Size(146, 112);
             this.EmpLoginBtn.TabIndex = 1;
-            this.EmpLoginBtn.Text = "Employee shit";
+            this.EmpLoginBtn.Text = "Employee Login";
             this.EmpLoginBtn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.EmpLoginBtn);
             this.Controls.Add(this.ATMBtn);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Home";
             this.ResumeLayout(false);
