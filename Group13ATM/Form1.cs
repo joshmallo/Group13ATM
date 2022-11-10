@@ -21,10 +21,5 @@ namespace Group13ATM
         {
 
         }
-
-        private void EmpLoginBtn_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
