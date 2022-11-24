@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace EmployeeLogin
 {
     partial class EmpLogin
@@ -142,6 +144,8 @@ namespace EmployeeLogin
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Button clrBtn;
         private System.Windows.Forms.Button extBtn;
+
+        public EventHandler loginBtn_Click { get; private set; }
     }
 }
 
