@@ -18,15 +18,6 @@ namespace EmployeeLogin
             InitializeComponent();
         }
         SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Employees;Integrated Security=True");
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EmpLogin_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
@@ -69,6 +60,28 @@ namespace EmployeeLogin
                 conn.Close();
             }
 
+        }
+
+        private void clrBtn_Click(object sender, EventArgs e)
+        {
+            txt_username.Clear();
+            txt_password.Clear();
+
+            txt_username.Focus();
+        }
+
+        private void extBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult res;
+            res = MessageBox.Show("Do you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                this.Show();
+            }
         }
     }
 }

@@ -16,5 +16,19 @@ namespace EmployeeLogin
         {
             InitializeComponent();
         }
+
+        private void bckBtn_Click(object sender, EventArgs e)
+        {
+            EmpLogin loginpg = new EmpLogin();
+            loginpg.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CreateAccount newacc = new CreateAccount();
+            newacc.Show();
+            this.Hide();
+        }
     }
 }

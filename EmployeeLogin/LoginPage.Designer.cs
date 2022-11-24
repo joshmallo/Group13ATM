@@ -84,13 +84,12 @@ namespace EmployeeLogin
             this.pasLbl.Size = new System.Drawing.Size(78, 20);
             this.pasLbl.TabIndex = 4;
             this.pasLbl.Text = "Password";
-            this.pasLbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // loginBtn
             // 
             this.loginBtn.Location = new System.Drawing.Point(427, 288);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(75, 28);
+            this.loginBtn.Size = new System.Drawing.Size(75, 33);
             this.loginBtn.TabIndex = 5;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
@@ -100,19 +99,21 @@ namespace EmployeeLogin
             // 
             this.clrBtn.Location = new System.Drawing.Point(307, 288);
             this.clrBtn.Name = "clrBtn";
-            this.clrBtn.Size = new System.Drawing.Size(75, 28);
+            this.clrBtn.Size = new System.Drawing.Size(75, 33);
             this.clrBtn.TabIndex = 6;
             this.clrBtn.Text = "Clear";
             this.clrBtn.UseVisualStyleBackColor = true;
+            this.clrBtn.Click += new System.EventHandler(this.clrBtn_Click);
             // 
             // extBtn
             // 
             this.extBtn.Location = new System.Drawing.Point(21, 391);
             this.extBtn.Name = "extBtn";
-            this.extBtn.Size = new System.Drawing.Size(75, 28);
+            this.extBtn.Size = new System.Drawing.Size(75, 33);
             this.extBtn.TabIndex = 7;
             this.extBtn.Text = "Exit";
             this.extBtn.UseVisualStyleBackColor = true;
+            this.extBtn.Click += new System.EventHandler(this.extBtn_Click);
             // 
             // EmpLogin
             // 
@@ -129,7 +130,6 @@ namespace EmployeeLogin
             this.Controls.Add(this.txt_username);
             this.Name = "EmpLogin";
             this.Text = "Employee Login";
-            this.Load += new System.EventHandler(this.EmpLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +146,6 @@ namespace EmployeeLogin
         private System.Windows.Forms.Button clrBtn;
         private System.Windows.Forms.Button extBtn;
 
-        public EventHandler loginBtn_Click { get; private set; }
     }
 }
 
