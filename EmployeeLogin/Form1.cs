@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace EmployeeLogin
 {
-    public partial class Form1 : Form
+    public partial class EmpLogin : Form
     {
-        public Form1()
+        public EmpLogin()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
