@@ -31,8 +31,8 @@ namespace EmployeeLogin
         /// </summary>
         private void InitializeComponent()
         {
-            this.username = new System.Windows.Forms.TextBox();
-            this.password = new System.Windows.Forms.TextBox();
+            this.txt_username = new System.Windows.Forms.TextBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
             this.LgnLbl = new System.Windows.Forms.Label();
             this.usnLbl = new System.Windows.Forms.Label();
             this.pasLbl = new System.Windows.Forms.Label();
@@ -41,20 +41,20 @@ namespace EmployeeLogin
             this.extBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // username
+            // txt_username
             // 
-            this.username.Location = new System.Drawing.Point(307, 159);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(195, 26);
-            this.username.TabIndex = 0;
+            this.txt_username.Location = new System.Drawing.Point(307, 159);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(195, 26);
+            this.txt_username.TabIndex = 0;
             // 
-            // password
+            // txt_password
             // 
-            this.password.Location = new System.Drawing.Point(307, 237);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(195, 26);
-            this.password.TabIndex = 1;
-            this.password.UseSystemPasswordChar = true;
+            this.txt_password.Location = new System.Drawing.Point(307, 237);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(195, 26);
+            this.txt_password.TabIndex = 1;
+            this.txt_password.UseSystemPasswordChar = true;
             // 
             // LgnLbl
             // 
@@ -125,10 +125,11 @@ namespace EmployeeLogin
             this.Controls.Add(this.pasLbl);
             this.Controls.Add(this.usnLbl);
             this.Controls.Add(this.LgnLbl);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.username);
+            this.Controls.Add(this.txt_password);
+            this.Controls.Add(this.txt_username);
             this.Name = "EmpLogin";
             this.Text = "Employee Login";
+            this.Load += new System.EventHandler(this.EmpLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,8 +137,8 @@ namespace EmployeeLogin
 
         #endregion
 
-        private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox txt_username;
+        private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Label LgnLbl;
         private System.Windows.Forms.Label usnLbl;
         private System.Windows.Forms.Label pasLbl;

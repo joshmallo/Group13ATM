@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace EmployeeLogin
 {
-    public partial class EmpLogin : Form
+    public partial class AAS : Form
     {
-        public EmpLogin()
+        public AAS()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
