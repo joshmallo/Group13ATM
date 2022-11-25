@@ -39,8 +39,11 @@ namespace EmployeeLogin
             this.txt_password = new System.Windows.Forms.TextBox();
             this.createAccountBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.TextBox();
+            this.txt_ID = new System.Windows.Forms.TextBox();
             this.backBtn = new System.Windows.Forms.Button();
+            this.empGridView = new System.Windows.Forms.DataGridView();
+            this.showBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.empGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -128,13 +131,12 @@ namespace EmployeeLogin
             this.label5.TabIndex = 10;
             this.label5.Text = "Employee ID";
             // 
-            // ID
+            // txt_ID
             // 
-            this.ID.Location = new System.Drawing.Point(22, 218);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(172, 26);
-            this.ID.TabIndex = 11;
-            this.ID.UseSystemPasswordChar = true;
+            this.txt_ID.Location = new System.Drawing.Point(22, 218);
+            this.txt_ID.Name = "txt_ID";
+            this.txt_ID.Size = new System.Drawing.Size(172, 26);
+            this.txt_ID.TabIndex = 11;
             // 
             // backBtn
             // 
@@ -146,13 +148,35 @@ namespace EmployeeLogin
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
+            // empGridView
+            // 
+            this.empGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.empGridView.Location = new System.Drawing.Point(435, 20);
+            this.empGridView.Name = "empGridView";
+            this.empGridView.RowHeadersWidth = 62;
+            this.empGridView.RowTemplate.Height = 28;
+            this.empGridView.Size = new System.Drawing.Size(357, 417);
+            this.empGridView.TabIndex = 13;
+            // 
+            // showBtn
+            // 
+            this.showBtn.Location = new System.Drawing.Point(330, 404);
+            this.showBtn.Name = "showBtn";
+            this.showBtn.Size = new System.Drawing.Size(87, 33);
+            this.showBtn.TabIndex = 14;
+            this.showBtn.Text = "Show >>";
+            this.showBtn.UseVisualStyleBackColor = true;
+            this.showBtn.Click += new System.EventHandler(this.showBtn_Click);
+            // 
             // CreateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.showBtn);
+            this.Controls.Add(this.empGridView);
             this.Controls.Add(this.backBtn);
-            this.Controls.Add(this.ID);
+            this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.createAccountBtn);
             this.Controls.Add(this.txt_password);
@@ -165,6 +189,7 @@ namespace EmployeeLogin
             this.Controls.Add(this.label1);
             this.Name = "CreateAccount";
             this.Text = "CreateAccount";
+            ((System.ComponentModel.ISupportInitialize)(this.empGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,7 +207,9 @@ namespace EmployeeLogin
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button createAccountBtn;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox ID;
+        private System.Windows.Forms.TextBox txt_ID;
         private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.DataGridView empGridView;
+        private System.Windows.Forms.Button showBtn;
     }
 }

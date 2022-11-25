@@ -18,8 +18,8 @@ namespace EmployeeLogin
         {
             InitializeComponent();
         }
-        SQLiteConnection conn = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
-
+        SQLiteConnection con = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
+        
         private void loginBtn_Click(object sender, EventArgs e)
         {
             String username, password;
@@ -28,8 +28,8 @@ namespace EmployeeLogin
 
             try
             {
-                String querry = "SELECT * FROM Login WHERE username = '" + txt_username.Text + "' AND password = '" + txt_password.Text + "'";
-                SQLiteDataAdapter sda = new SQLiteDataAdapter(querry, conn);
+                String querry = "SELECT * FROM Employee WHERE username = '" + txt_username.Text + "' AND password = '" + txt_password.Text + "'";
+                SQLiteDataAdapter sda = new SQLiteDataAdapter(querry, con);
 
                 DataTable dtable = new DataTable();
                 sda.Fill(dtable);
@@ -58,7 +58,7 @@ namespace EmployeeLogin
             }
             finally
             {
-                conn.Close();
+                con.Close();
             }
 
         }
