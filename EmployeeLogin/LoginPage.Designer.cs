@@ -107,7 +107,7 @@ namespace EmployeeLogin
             // 
             // extBtn
             // 
-            this.extBtn.Location = new System.Drawing.Point(21, 391);
+            this.extBtn.Location = new System.Drawing.Point(12, 405);
             this.extBtn.Name = "extBtn";
             this.extBtn.Size = new System.Drawing.Size(75, 33);
             this.extBtn.TabIndex = 7;

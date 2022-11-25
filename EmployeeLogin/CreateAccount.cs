@@ -36,7 +36,13 @@ namespace EmployeeLogin
             {
                 String querry = "INSERT INTO Login(Username, Password, Firstname, Lastname) VALUES ('"+username+"', '"+password+"', '"+firstname+"', '"+lastname+"')";
                 SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
-    
+
+                DataTable dtable = new DataTable();
+                sda.Fill(dtable);
+                if ()
+                {
+
+                }
             }
             catch
             {
@@ -46,6 +52,13 @@ namespace EmployeeLogin
             {
                 conn.Close();
             }
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            AAS backHome = new AAS();
+            backHome.Show();
+            this.Hide();
         }
     }
 }

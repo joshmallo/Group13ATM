@@ -33,6 +33,8 @@ namespace EmployeeLogin
                 DataTable dtable = new DataTable();
                 sda.Fill(dtable);
 
+                foreach(DataRow )
+
                 if(dtable.Rows.Count > 0)
                 {
                     username = txt_username.Text;
