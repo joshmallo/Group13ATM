@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace EmployeeLogin
 {
@@ -29,6 +30,20 @@ namespace EmployeeLogin
             CreateAccount newacc = new CreateAccount();
             newacc.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SQLiteConnection con = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
+            con.Open();
+
+            string querry = "SELECT * from Customer";
+            SQLiteCommand cmd = new SQLiteCommand(querry, con);
+
+            DataTable dt = new DataTable();
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+            adapter.Fill(dt);
+            customerDataView.DataSource = dt;
         }
     }
 }

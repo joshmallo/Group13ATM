@@ -35,6 +35,9 @@ namespace EmployeeLogin
             this.bckBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.customerDataView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -92,11 +95,33 @@ namespace EmployeeLogin
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(19, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(250, 33);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "View customer data";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // customerDataView
+            // 
+            this.customerDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.customerDataView.Location = new System.Drawing.Point(24, 108);
+            this.customerDataView.Name = "customerDataView";
+            this.customerDataView.RowHeadersWidth = 62;
+            this.customerDataView.RowTemplate.Height = 28;
+            this.customerDataView.Size = new System.Drawing.Size(763, 283);
+            this.customerDataView.TabIndex = 13;
+            // 
             // AAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.customerDataView);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bckBtn);
@@ -105,6 +130,7 @@ namespace EmployeeLogin
             this.Controls.Add(this.label1);
             this.Name = "AAS";
             this.Text = "Account Access System";
+            ((System.ComponentModel.ISupportInitialize)(this.customerDataView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +144,7 @@ namespace EmployeeLogin
         private System.Windows.Forms.Button bckBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView customerDataView;
     }
 }
