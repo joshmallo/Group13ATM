@@ -18,7 +18,7 @@ namespace EmployeeLogin
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Employees;Integrated Security=True");
+        SQLiteConnection conn = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
@@ -29,7 +29,7 @@ namespace EmployeeLogin
             try
             {
                 String querry = "SELECT * FROM Login WHERE username = '" + txt_username.Text + "' AND password = '" + txt_password.Text + "'";
-                SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
+                SQLiteDataAdapter sda = new SQLiteDataAdapter(querry, conn);
 
                 DataTable dtable = new DataTable();
                 sda.Fill(dtable);
