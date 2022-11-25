@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 
 namespace EmployeeLogin
 {
@@ -32,8 +33,6 @@ namespace EmployeeLogin
 
                 DataTable dtable = new DataTable();
                 sda.Fill(dtable);
-
-                foreach(DataRow )
 
                 if(dtable.Rows.Count > 0)
                 {

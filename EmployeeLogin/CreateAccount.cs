@@ -26,23 +26,21 @@ namespace EmployeeLogin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String username, password, firstname, lastname;
+            String username, password, firstname, lastname, empID;
             username = txt_username.Text;
             password = txt_password.Text;
             firstname = txt_firstName.Text;
             lastname = txt_lastName.Text;
+            empID = ID.Text;
+
+            // create another try catch to check an existing employee ID
+            // if true, return error message
+            // else, implement the try catch to insert the data
 
             try
             {
                 String querry = "INSERT INTO Login(Username, Password, Firstname, Lastname) VALUES ('"+username+"', '"+password+"', '"+firstname+"', '"+lastname+"')";
                 SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
-
-                DataTable dtable = new DataTable();
-                sda.Fill(dtable);
-                if ()
-                {
-
-                }
             }
             catch
             {

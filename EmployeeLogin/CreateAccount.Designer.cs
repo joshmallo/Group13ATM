@@ -39,7 +39,7 @@ namespace EmployeeLogin
             this.txt_password = new System.Windows.Forms.TextBox();
             this.createAccountBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.TextBox();
             this.backBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -128,13 +128,13 @@ namespace EmployeeLogin
             this.label5.TabIndex = 10;
             this.label5.Text = "Employee ID";
             // 
-            // textBox1
+            // ID
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 218);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(172, 26);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.ID.Location = new System.Drawing.Point(22, 218);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(172, 26);
+            this.ID.TabIndex = 11;
+            this.ID.UseSystemPasswordChar = true;
             // 
             // backBtn
             // 
@@ -152,7 +152,7 @@ namespace EmployeeLogin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.backBtn);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.createAccountBtn);
             this.Controls.Add(this.txt_password);
@@ -182,7 +182,7 @@ namespace EmployeeLogin
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button createAccountBtn;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Button backBtn;
     }
 }
