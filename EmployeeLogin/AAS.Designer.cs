@@ -32,11 +32,13 @@ namespace EmployeeLogin
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.bckBtn = new System.Windows.Forms.Button();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.newEmpBtn = new System.Windows.Forms.Button();
+            this.viewBtn = new System.Windows.Forms.Button();
             this.customerDataView = new System.Windows.Forms.DataGridView();
+            this.newAccountBtn = new System.Windows.Forms.Button();
+            this.cusLgnBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,22 +62,22 @@ namespace EmployeeLogin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(614, 37);
+            this.label3.Size = new System.Drawing.Size(315, 37);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Welcome to the account access system";
+            this.label3.Text = "Customer Accounts";
             // 
-            // bckBtn
+            // logoutBtn
             // 
-            this.bckBtn.Location = new System.Drawing.Point(19, 405);
-            this.bckBtn.Name = "bckBtn";
-            this.bckBtn.Size = new System.Drawing.Size(75, 33);
-            this.bckBtn.TabIndex = 8;
-            this.bckBtn.Text = "Logout";
-            this.bckBtn.UseVisualStyleBackColor = true;
-            this.bckBtn.Click += new System.EventHandler(this.bckBtn_Click);
+            this.logoutBtn.Location = new System.Drawing.Point(12, 518);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(75, 33);
+            this.logoutBtn.TabIndex = 8;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.UseVisualStyleBackColor = true;
+            this.logoutBtn.Click += new System.EventHandler(this.bckBtn_Click);
             // 
             // label4
             // 
@@ -85,46 +87,68 @@ namespace EmployeeLogin
             this.label4.Size = new System.Drawing.Size(0, 20);
             this.label4.TabIndex = 9;
             // 
-            // button2
+            // newEmpBtn
             // 
-            this.button2.Location = new System.Drawing.Point(538, 405);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 33);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Create New Employee Account";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.newEmpBtn.Location = new System.Drawing.Point(840, 518);
+            this.newEmpBtn.Name = "newEmpBtn";
+            this.newEmpBtn.Size = new System.Drawing.Size(250, 33);
+            this.newEmpBtn.TabIndex = 11;
+            this.newEmpBtn.Text = "Create New Employee Account";
+            this.newEmpBtn.UseVisualStyleBackColor = true;
+            this.newEmpBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // viewBtn
             // 
-            this.button1.Location = new System.Drawing.Point(19, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 33);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "View customer data";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.viewBtn.Location = new System.Drawing.Point(19, 69);
+            this.viewBtn.Name = "viewBtn";
+            this.viewBtn.Size = new System.Drawing.Size(250, 33);
+            this.viewBtn.TabIndex = 12;
+            this.viewBtn.Text = "View Customer Data";
+            this.viewBtn.UseVisualStyleBackColor = true;
+            this.viewBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // customerDataView
             // 
             this.customerDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerDataView.Location = new System.Drawing.Point(24, 108);
+            this.customerDataView.Location = new System.Drawing.Point(12, 108);
             this.customerDataView.Name = "customerDataView";
             this.customerDataView.RowHeadersWidth = 62;
             this.customerDataView.RowTemplate.Height = 28;
-            this.customerDataView.Size = new System.Drawing.Size(763, 283);
+            this.customerDataView.Size = new System.Drawing.Size(1078, 404);
             this.customerDataView.TabIndex = 13;
+            // 
+            // newAccountBtn
+            // 
+            this.newAccountBtn.Location = new System.Drawing.Point(840, 69);
+            this.newAccountBtn.Name = "newAccountBtn";
+            this.newAccountBtn.Size = new System.Drawing.Size(250, 33);
+            this.newAccountBtn.TabIndex = 14;
+            this.newAccountBtn.Text = "Create New Customer Account";
+            this.newAccountBtn.UseVisualStyleBackColor = true;
+            this.newAccountBtn.Click += new System.EventHandler(this.newAccountBtn_Click);
+            // 
+            // cusLgnBtn
+            // 
+            this.cusLgnBtn.Location = new System.Drawing.Point(449, 69);
+            this.cusLgnBtn.Name = "cusLgnBtn";
+            this.cusLgnBtn.Size = new System.Drawing.Size(250, 33);
+            this.cusLgnBtn.TabIndex = 15;
+            this.cusLgnBtn.Text = "View Customer Transactions";
+            this.cusLgnBtn.UseVisualStyleBackColor = true;
+            this.cusLgnBtn.Click += new System.EventHandler(this.cusLgnBtn_Click);
             // 
             // AAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1102, 563);
+            this.Controls.Add(this.cusLgnBtn);
+            this.Controls.Add(this.newAccountBtn);
             this.Controls.Add(this.customerDataView);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.viewBtn);
+            this.Controls.Add(this.newEmpBtn);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.bckBtn);
+            this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -141,10 +165,12 @@ namespace EmployeeLogin
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button bckBtn;
+        private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button newEmpBtn;
+        private System.Windows.Forms.Button viewBtn;
         private System.Windows.Forms.DataGridView customerDataView;
+        private System.Windows.Forms.Button newAccountBtn;
+        private System.Windows.Forms.Button cusLgnBtn;
     }
 }

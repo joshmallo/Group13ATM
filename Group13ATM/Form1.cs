@@ -135,6 +135,10 @@ namespace Group13ATM
             //4.View a statement of the last ten transactions(i.e., either a withdrawal or a transfer of fund) on a particular account
             //5.Stop using the machine
 
+            //create a tracker for how many times a pin has been entered after 3 attempts they should be locked out
+            //once logged in check if transactions table for the account exists if not create one, each time their is a transaction add a field
+            //that is headed with the date and the amount give option to show a grid view of their transactions,, when naming the table make sure it is unique to their account
+
             if (enterPinScreen.Visible)
             {
                 Clear();

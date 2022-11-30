@@ -140,7 +140,7 @@ namespace EmployeeLogin
             // 
             // backBtn
             // 
-            this.backBtn.Location = new System.Drawing.Point(12, 405);
+            this.backBtn.Location = new System.Drawing.Point(12, 482);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(75, 33);
             this.backBtn.TabIndex = 12;
@@ -151,28 +151,29 @@ namespace EmployeeLogin
             // empGridView
             // 
             this.empGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.empGridView.Location = new System.Drawing.Point(435, 20);
+            this.empGridView.Location = new System.Drawing.Point(408, 20);
             this.empGridView.Name = "empGridView";
             this.empGridView.RowHeadersWidth = 62;
             this.empGridView.RowTemplate.Height = 28;
-            this.empGridView.Size = new System.Drawing.Size(357, 417);
+            this.empGridView.Size = new System.Drawing.Size(697, 495);
             this.empGridView.TabIndex = 13;
             // 
             // showBtn
             // 
-            this.showBtn.Location = new System.Drawing.Point(330, 404);
+            this.showBtn.Location = new System.Drawing.Point(208, 482);
             this.showBtn.Name = "showBtn";
-            this.showBtn.Size = new System.Drawing.Size(87, 33);
+            this.showBtn.Size = new System.Drawing.Size(194, 33);
             this.showBtn.TabIndex = 14;
-            this.showBtn.Text = "Show >>";
+            this.showBtn.Text = "Show Employees >>";
             this.showBtn.UseVisualStyleBackColor = true;
             this.showBtn.Click += new System.EventHandler(this.showBtn_Click);
             // 
             // CreateAccount
             // 
+            this.AcceptButton = this.createAccountBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1117, 527);
             this.Controls.Add(this.showBtn);
             this.Controls.Add(this.empGridView);
             this.Controls.Add(this.backBtn);

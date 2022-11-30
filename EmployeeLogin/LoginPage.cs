@@ -19,7 +19,7 @@ namespace EmployeeLogin
             InitializeComponent();
         }
         SQLiteConnection con = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
-        
+
         private void loginBtn_Click(object sender, EventArgs e)
         {
             String username, password;
@@ -48,7 +48,6 @@ namespace EmployeeLogin
                     MessageBox.Show("incorrect username or password","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txt_username.Clear();
                     txt_password.Clear();
-
                     txt_username.Focus();
                 }
             }

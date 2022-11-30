@@ -35,24 +35,31 @@ namespace EmployeeLogin
             lastname = txt_lastName.Text;
             empID = txt_ID.Text;
 
-            // create another try catch to check an existing employee ID
-            // if true, return error message
-            // else, implement the try catch to insert the data
+            string querry = "SELECT * from Employee";
+            SQLiteCommand cmd = new SQLiteCommand(querry, con);
 
-            try
+            DataTable dt = new DataTable();
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+            adapter.Fill(dt);
+
+            List<string> empIDs = dt.AsEnumerable().Select(x => x[0].ToString()).ToList();
+
+            foreach (string n in empIDs)
             {
-                String querry = "INSERT INTO Employee(ID, Username, Password, Firstname, Lastname) VALUES ('"+empID+"', '"+username+"', '"+password+"', '"+firstname+"', '"+lastname+"')";
-                SQLiteCommand sda = new SQLiteCommand(querry, con);
-                sda.ExecuteNonQuery();
-                MessageBox.Show("entered..."," ", MessageBoxButtons.OK);
-            }
-            catch
-            {
-                MessageBox.Show("error!");
-            }
-            finally
-            {
-                con.Close();
+                if (n != empID)
+                {
+                    String sqlcmd = "INSERT INTO Employee(ID, Username, Password, Firstname, Lastname) VALUES ('" + empID + "', '" + username + "', '" + password + "', '" + firstname + "', '" + lastname + "')";
+                    SQLiteCommand sda = new SQLiteCommand(sqlcmd, con);
+                    sda.ExecuteNonQuery();
+                    MessageBox.Show("Employee account successfully created", " ", MessageBoxButtons.OK);
+                    con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Account number already in use", " ", MessageBoxButtons.OK);
+                    txt_ID.Clear();
+                    con.Close();
+                }
             }
         }
 

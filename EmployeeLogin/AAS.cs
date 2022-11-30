@@ -45,5 +45,19 @@ namespace EmployeeLogin
             adapter.Fill(dt);
             customerDataView.DataSource = dt;
         }
+
+        private void newAccountBtn_Click(object sender, EventArgs e)
+        {
+            NewCustomer newCus = new NewCustomer();
+            newCus.Show();
+            this.Hide();
+        }
+
+        private void cusLgnBtn_Click(object sender, EventArgs e)
+        {
+            CustomerTransactions cusTr = new CustomerTransactions();
+            cusTr.Show();
+            this.Hide();
+        }
     }
 }
