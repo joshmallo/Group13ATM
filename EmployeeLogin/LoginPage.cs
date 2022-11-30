@@ -67,7 +67,6 @@ namespace EmployeeLogin
         {
             txt_username.Clear();
             txt_password.Clear();
-
             txt_username.Focus();
         }
 

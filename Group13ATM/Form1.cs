@@ -127,6 +127,14 @@ namespace Group13ATM
 
         private void numPadEnter_Click(object sender, EventArgs e)
         {
+            //Check whether pin matches Customer.db
+            //then open new form or clear enterPinScreen and show next actions --
+            //1.Review the balance on any account they hold with the bank,
+            //2.Withdraw cash from certain accounts,
+            //3.Transfer funds between accounts, and
+            //4.View a statement of the last ten transactions(i.e., either a withdrawal or a transfer of fund) on a particular account
+            //5.Stop using the machine
+
             if (enterPinScreen.Visible)
             {
                 Clear();
