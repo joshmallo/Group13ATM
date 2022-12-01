@@ -44,13 +44,13 @@ namespace EmployeeLogin
             if (dtable.Rows.Count > 0)
             {
 
-                string sqlcmd2 = "SELECT * FROM " + txt_accountNum.Text + "Transactions";
+                //string sqlcmd2 = "SELECT * FROM " + txt_accountNum.Text + "1Transactions";
+                string sqlcmd2 = "SELECT * FROM Transactions_" + accNum;
                 SQLiteCommand cmd2 = new SQLiteCommand(sqlcmd2, con);
-
+                cmd2.ExecuteNonQuery();
                 DataTable dt2 = new DataTable();
                 SQLiteDataAdapter adapter2 = new SQLiteDataAdapter(cmd2);
                 adapter2.Fill(dt2);
-
                 TransactionsGridView.DataSource = dt2;
             }
             else
