@@ -39,6 +39,7 @@ namespace EmployeeLogin
             this.loginBtn = new System.Windows.Forms.Button();
             this.clrBtn = new System.Windows.Forms.Button();
             this.extBtn = new System.Windows.Forms.Button();
+            this.dutchBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_username
@@ -115,12 +116,23 @@ namespace EmployeeLogin
             this.extBtn.UseVisualStyleBackColor = true;
             this.extBtn.Click += new System.EventHandler(this.extBtn_Click);
             // 
+            // dutchBtn
+            // 
+            this.dutchBtn.Image = global::EmployeeLogin.Properties.Resources.dutch_flag_medium;
+            this.dutchBtn.Location = new System.Drawing.Point(681, 12);
+            this.dutchBtn.Name = "dutchBtn";
+            this.dutchBtn.Size = new System.Drawing.Size(107, 65);
+            this.dutchBtn.TabIndex = 8;
+            this.dutchBtn.UseVisualStyleBackColor = true;
+            this.dutchBtn.Click += new System.EventHandler(this.dutchBtn_Click);
+            // 
             // EmpLogin
             // 
             this.AcceptButton = this.loginBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dutchBtn);
             this.Controls.Add(this.extBtn);
             this.Controls.Add(this.clrBtn);
             this.Controls.Add(this.loginBtn);
@@ -146,7 +158,7 @@ namespace EmployeeLogin
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Button clrBtn;
         private System.Windows.Forms.Button extBtn;
-
+        private System.Windows.Forms.Button dutchBtn;
     }
 }
 

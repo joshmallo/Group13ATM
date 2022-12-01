@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SQLite;
+using DarrenLee.Translator;
 
 namespace EmployeeLogin
 {
@@ -82,6 +83,28 @@ namespace EmployeeLogin
             else
             {
                 this.Show();
+            }
+        }
+
+        private void dutchBtn_Click(object sender, EventArgs e)
+        {
+            foreach (Label lbl in this.Controls.OfType<Label>())
+            {
+                string dutchText = Translator.Translate(lbl.Text, "en", "nl");
+                lbl.Text = dutchText;
+                lbl.Invalidate();
+                lbl.Update();
+            }
+            foreach(Button btn in this.Controls.OfType<Button>())
+            {
+                if (btn.Text.Length > 0)
+                {
+                    string dutchbuttons = Translator.Translate(btn.Text, "en", "nl");
+                    btn.Text = dutchbuttons;
+                    btn.Invalidate();
+                    btn.Update();
+                }
+                else return; 
             }
         }
     }
