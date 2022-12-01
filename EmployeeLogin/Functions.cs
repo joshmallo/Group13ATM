@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SQLite;
 
 namespace EmployeeLogin
 {
@@ -10,7 +11,7 @@ namespace EmployeeLogin
     {
         public static string pathToDB()
         {
-            return @"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db";
+            return @"data source=C:\Users\Mwa\Documents\GitHub\Group13ATM2\Databases\Employee.db";
         }
     }
 }
