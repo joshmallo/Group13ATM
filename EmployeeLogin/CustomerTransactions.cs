@@ -33,42 +33,42 @@ namespace EmployeeLogin
             accNum = Convert.ToInt32(txt_accountNum.Text);
             PIN = Convert.ToInt32(txt_PIN.Text);
 
-            //try
-            //{
-            string sqlcmd = "SELECT * FROM Customer WHERE AccountNum = '" + accNum + "' AND PIN = '" + PIN + "'";
-            SQLiteDataAdapter sda = new SQLiteDataAdapter(sqlcmd, con);
-
-            DataTable dtable = new DataTable();
-            sda.Fill(dtable);
-
-            if (dtable.Rows.Count > 0)
+            try
             {
+                string sqlcmd = "SELECT * FROM Customer WHERE AccountNum = '" + accNum + "' AND PIN = '" + PIN + "'";
+                SQLiteDataAdapter sda = new SQLiteDataAdapter(sqlcmd, con);
 
-                //string sqlcmd2 = "SELECT * FROM " + txt_accountNum.Text + "1Transactions";
-                string sqlcmd2 = "SELECT * FROM Transactions_" + accNum;
-                SQLiteCommand cmd2 = new SQLiteCommand(sqlcmd2, con);
-                cmd2.ExecuteNonQuery();
-                DataTable dt2 = new DataTable();
-                SQLiteDataAdapter adapter2 = new SQLiteDataAdapter(cmd2);
-                adapter2.Fill(dt2);
-                TransactionsGridView.DataSource = dt2;
+                DataTable dtable = new DataTable();
+                sda.Fill(dtable);
+
+                if (dtable.Rows.Count > 0)
+                {
+
+                    //string sqlcmd2 = "SELECT * FROM " + txt_accountNum.Text + "1Transactions";
+                    string sqlcmd2 = "SELECT * FROM Transactions_" + accNum;
+                    SQLiteCommand cmd2 = new SQLiteCommand(sqlcmd2, con);
+                    cmd2.ExecuteNonQuery();
+                    DataTable dt2 = new DataTable();
+                    SQLiteDataAdapter adapter2 = new SQLiteDataAdapter(cmd2);
+                    adapter2.Fill(dt2);
+                    TransactionsGridView.DataSource = dt2;
+                }
+                else
+                {
+                    MessageBox.Show("incorrect account number or PIN", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_PIN.Clear();
+                    txt_accountNum.Clear();
+                    txt_accountNum.Focus();
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("incorrect account number or PIN", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txt_PIN.Clear();
-                txt_accountNum.Clear();
-                txt_accountNum.Focus();
+                MessageBox.Show("Error");
             }
-            //}
-           // catch
-           // {
-           //     MessageBox.Show("Error");
-          //  }
-          //  finally
-          //  {
-          //      con.Close();
-          //  }
+            finally
+            {
+            con.Close();
+            }
         }
     }
 }
