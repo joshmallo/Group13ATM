@@ -27,7 +27,7 @@ namespace EmployeeLogin
 
         private void showTransactionsBtn_Click(object sender, EventArgs e)
         {
-            SQLiteConnection con = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
+            SQLiteConnection con = new SQLiteConnection(Functions.pathToDB());
             con.Open();
             int accNum, PIN;
             accNum = Convert.ToInt32(txt_accountNum.Text);

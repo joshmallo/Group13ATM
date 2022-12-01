@@ -26,7 +26,7 @@ namespace EmployeeLogin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SQLiteConnection con = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
+            SQLiteConnection con = new SQLiteConnection(Functions.pathToDB());
             con.Open();
             String username, password, firstname, lastname, empID;
             username = txt_username.Text;
@@ -72,7 +72,7 @@ namespace EmployeeLogin
 
         private void showBtn_Click(object sender, EventArgs e)
         {
-            SQLiteConnection con = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
+            SQLiteConnection con = new SQLiteConnection(Functions.pathToDB());
             con.Open();
 
             string querry = "SELECT * from Employee";

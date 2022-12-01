@@ -46,7 +46,7 @@ namespace EmployeeLogin
 
         private void createAccountBtn_Click(object sender, EventArgs e)
         {
-            SQLiteConnection con = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
+            SQLiteConnection con = new SQLiteConnection(Functions.pathToDB());
             con.Open();
             String accountNum, firstname, lastname, pin, age, address, salary, overdraft;
             accountNum = txt_accountNumber.Text;
