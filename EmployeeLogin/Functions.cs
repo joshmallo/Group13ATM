@@ -11,7 +11,7 @@ namespace EmployeeLogin
     {
         public static string pathToDB()
         {
-            return @"data source=C:\Users\Mwa\Documents\GitHub\Group13ATM2\Databases\Employee.db";
+            return @"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db";
         }
     }
 }
