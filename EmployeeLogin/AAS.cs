@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using DarrenLee.Translator;
 
 namespace EmployeeLogin
 {
@@ -17,11 +18,94 @@ namespace EmployeeLogin
         {
             InitializeComponent();
         }
-        if(Dutch == true)
+        /*public void Run()
         {
-
-        }
-
+            if (EmpLogin.Dutch == true)
+            {
+                foreach (Label lbl in this.Controls.OfType<Label>())
+                {
+                    string dutchText = Translator.Translate(lbl.Text, "en", "nl");
+                    lbl.Text = dutchText;
+                    lbl.Invalidate();
+                    lbl.Update();
+                }
+                foreach (Button btn in this.Controls.OfType<Button>())
+                {
+                    if (btn.Text.Length > 0)
+                    {
+                        string dutchButtons = Translator.Translate(btn.Text, "en", "nl");
+                        btn.Text = dutchButtons;
+                        btn.Invalidate();
+                        btn.Update();
+                    }
+                    else return;
+                }
+            }
+            else if (EmpLogin.German == true)
+            {
+                foreach (Label lbl in this.Controls.OfType<Label>())
+                {
+                    string germanText = Translator.Translate(lbl.Text, "en", "de");
+                    lbl.Text = germanText;
+                    lbl.Invalidate();
+                    lbl.Update();
+                }
+                foreach (Button btn in this.Controls.OfType<Button>())
+                {
+                    if (btn.Text.Length > 0)
+                    {
+                        string germanButtons = Translator.Translate(btn.Text, "en", "de");
+                        btn.Text = germanButtons;
+                        btn.Invalidate();
+                        btn.Update();
+                    }
+                    else return;
+                }
+            }
+            else if (EmpLogin.Spanish == true)
+            {
+                foreach (Label lbl in this.Controls.OfType<Label>())
+                {
+                    string spanishText = Translator.Translate(lbl.Text, "en", "es");
+                    lbl.Text = spanishText;
+                    lbl.Invalidate();
+                    lbl.Update();
+                }
+                foreach (Button btn in this.Controls.OfType<Button>())
+                {
+                    if (btn.Text.Length > 0)
+                    {
+                        string spanishButtons = Translator.Translate(btn.Text, "en", "es");
+                        btn.Text = spanishButtons;
+                        btn.Invalidate();
+                        btn.Update();
+                    }
+                    else return;
+                }
+            }
+            else if (EmpLogin.French == true)
+            {
+                foreach (Label lbl in this.Controls.OfType<Label>())
+                {
+                    string frenchText = Translator.Translate(lbl.Text, "en", "fr");
+                    lbl.Text = frenchText;
+                    lbl.Invalidate();
+                    lbl.Update();
+                }
+                foreach (Button btn in this.Controls.OfType<Button>())
+                {
+                    if (btn.Text.Length > 0)
+                    {
+                        string frenchButtons = Translator.Translate(btn.Text, "en", "fr");
+                        btn.Text = frenchButtons;
+                        btn.Invalidate();
+                        btn.Update();
+                    }
+                    else return;
+                }
+            }
+            else return;
+        }*/
         private void bckBtn_Click(object sender, EventArgs e)
         {
             EmpLogin loginpg = new EmpLogin();

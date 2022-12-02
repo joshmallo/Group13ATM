@@ -17,19 +17,12 @@ namespace EmployeeLogin
         {
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void backBtn_Click(object sender, EventArgs e)
         {
             AAS back = new AAS();
             back.Show();
             this.Hide();
         }
-
         private void showBtn_Click(object sender, EventArgs e)
         {
             SQLiteConnection con = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
@@ -43,7 +36,6 @@ namespace EmployeeLogin
             adapter.Fill(dt);
             customerDataView.DataSource = dt;
         }
-
         private void createAccountBtn_Click(object sender, EventArgs e)
         {
             SQLiteConnection con = new SQLiteConnection(Functions.pathToDB());
@@ -71,20 +63,18 @@ namespace EmployeeLogin
             {
                 if(n != accountNum)
                 {
-
                     String sqlcmd = "INSERT INTO Customer(AccountNum, Firstname, Lastname, PIN, Age, Address, Salary, Overdraft) VALUES ('" + accountNum + "', '" + firstname + "', '" + lastname + "', '" + pin + "', '" + age + "', '" + address + "', '" + salary + "', '"+overdraft+"')";
                     SQLiteCommand sda = new SQLiteCommand(sqlcmd, con);
                     sda.ExecuteNonQuery();
                     MessageBox.Show("Account successfully created!", " ", MessageBoxButtons.OK);
-                    con.Close();
                 }
                 else
                 {
                     MessageBox.Show("Account number already in use", " ", MessageBoxButtons.OK);
                     txt_accountNumber.Clear();
-                    con.Close();
                 }
             }
+            con.Close();
         }
     }
 }

@@ -30,6 +30,7 @@ namespace EmployeeLogin
             SQLiteConnection con = new SQLiteConnection(Functions.pathToDB());
             con.Open();
             int accNum, PIN;
+
             accNum = Convert.ToInt32(txt_accountNum.Text);
             PIN = Convert.ToInt32(txt_PIN.Text);
 

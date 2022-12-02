@@ -41,6 +41,7 @@ namespace EmployeeLogin
             DataTable dt = new DataTable();
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
             adapter.Fill(dt);
+            con.Close();
 
             List<string> empIDs = dt.AsEnumerable().Select(x => x[0].ToString()).ToList();
 
@@ -48,6 +49,7 @@ namespace EmployeeLogin
             {
                 if (n != empID)
                 {
+                    con.Open();
                     String sqlcmd = "INSERT INTO Employee(ID, Username, Password, Firstname, Lastname) VALUES ('" + empID + "', '" + username + "', '" + password + "', '" + firstname + "', '" + lastname + "')";
                     SQLiteCommand sda = new SQLiteCommand(sqlcmd, con);
                     sda.ExecuteNonQuery();
@@ -58,9 +60,10 @@ namespace EmployeeLogin
                 {
                     MessageBox.Show("Account number already in use", " ", MessageBoxButtons.OK);
                     txt_ID.Clear();
-                    con.Close();
+                    txt_ID.Focus();
                 }
             }
+            //con.Close();
         }
 
         private void backBtn_Click(object sender, EventArgs e)
