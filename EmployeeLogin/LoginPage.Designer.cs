@@ -31,6 +31,7 @@ namespace EmployeeLogin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmpLogin));
             this.txt_username = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.LgnLbl = new System.Windows.Forms.Label();
@@ -40,6 +41,9 @@ namespace EmployeeLogin
             this.clrBtn = new System.Windows.Forms.Button();
             this.extBtn = new System.Windows.Forms.Button();
             this.dutchBtn = new System.Windows.Forms.Button();
+            this.germanBtn = new System.Windows.Forms.Button();
+            this.spanishBtn = new System.Windows.Forms.Button();
+            this.frenchBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_username
@@ -110,7 +114,7 @@ namespace EmployeeLogin
             // 
             this.extBtn.Location = new System.Drawing.Point(12, 405);
             this.extBtn.Name = "extBtn";
-            this.extBtn.Size = new System.Drawing.Size(89, 33);
+            this.extBtn.Size = new System.Drawing.Size(98, 33);
             this.extBtn.TabIndex = 7;
             this.extBtn.Text = "Exit";
             this.extBtn.UseVisualStyleBackColor = true;
@@ -128,12 +132,51 @@ namespace EmployeeLogin
             this.dutchBtn.UseVisualStyleBackColor = true;
             this.dutchBtn.Click += new System.EventHandler(this.dutchBtn_Click);
             // 
+            // germanBtn
+            // 
+            this.germanBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.germanBtn.Image = ((System.Drawing.Image)(resources.GetObject("germanBtn.Image")));
+            this.germanBtn.Location = new System.Drawing.Point(652, 12);
+            this.germanBtn.Name = "germanBtn";
+            this.germanBtn.Size = new System.Drawing.Size(65, 49);
+            this.germanBtn.TabIndex = 9;
+            this.germanBtn.Text = ".";
+            this.germanBtn.UseVisualStyleBackColor = true;
+            this.germanBtn.Click += new System.EventHandler(this.germanBtn_Click);
+            // 
+            // spanishBtn
+            // 
+            this.spanishBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spanishBtn.Image = ((System.Drawing.Image)(resources.GetObject("spanishBtn.Image")));
+            this.spanishBtn.Location = new System.Drawing.Point(581, 12);
+            this.spanishBtn.Name = "spanishBtn";
+            this.spanishBtn.Size = new System.Drawing.Size(65, 49);
+            this.spanishBtn.TabIndex = 10;
+            this.spanishBtn.Text = ".";
+            this.spanishBtn.UseVisualStyleBackColor = true;
+            this.spanishBtn.Click += new System.EventHandler(this.spanishBtn_Click);
+            // 
+            // frenchBtn
+            // 
+            this.frenchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frenchBtn.Image = ((System.Drawing.Image)(resources.GetObject("frenchBtn.Image")));
+            this.frenchBtn.Location = new System.Drawing.Point(510, 12);
+            this.frenchBtn.Name = "frenchBtn";
+            this.frenchBtn.Size = new System.Drawing.Size(65, 49);
+            this.frenchBtn.TabIndex = 11;
+            this.frenchBtn.Text = ".";
+            this.frenchBtn.UseVisualStyleBackColor = true;
+            this.frenchBtn.Click += new System.EventHandler(this.frenchBtn_Click);
+            // 
             // EmpLogin
             // 
             this.AcceptButton = this.loginBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.frenchBtn);
+            this.Controls.Add(this.spanishBtn);
+            this.Controls.Add(this.germanBtn);
             this.Controls.Add(this.dutchBtn);
             this.Controls.Add(this.extBtn);
             this.Controls.Add(this.clrBtn);
@@ -161,6 +204,9 @@ namespace EmployeeLogin
         private System.Windows.Forms.Button clrBtn;
         private System.Windows.Forms.Button extBtn;
         private System.Windows.Forms.Button dutchBtn;
+        private System.Windows.Forms.Button germanBtn;
+        private System.Windows.Forms.Button spanishBtn;
+        private System.Windows.Forms.Button frenchBtn;
     }
 }
 

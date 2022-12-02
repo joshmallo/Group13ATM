@@ -107,5 +107,71 @@ namespace EmployeeLogin
                 else return; 
             }
         }
+
+        private void germanBtn_Click(object sender, EventArgs e)
+        {
+            foreach (Label lbl in this.Controls.OfType<Label>())
+            {
+                string dutchText = Translator.Translate(lbl.Text, "en", "de");
+                lbl.Text = dutchText;
+                lbl.Invalidate();
+                lbl.Update();
+            }
+            foreach (Button btn in this.Controls.OfType<Button>())
+            {
+                if (btn.Text.Length > 0)
+                {
+                    string dutchButtons = Translator.Translate(btn.Text, "en", "de");
+                    btn.Text = dutchButtons;
+                    btn.Invalidate();
+                    btn.Update();
+                }
+                else return;
+            }
+        }
+
+        private void spanishBtn_Click(object sender, EventArgs e)
+        {
+            foreach (Label lbl in this.Controls.OfType<Label>())
+            {
+                string dutchText = Translator.Translate(lbl.Text, "en", "es");
+                lbl.Text = dutchText;
+                lbl.Invalidate();
+                lbl.Update();
+            }
+            foreach (Button btn in this.Controls.OfType<Button>())
+            {
+                if (btn.Text.Length > 0)
+                {
+                    string dutchButtons = Translator.Translate(btn.Text, "en", "es");
+                    btn.Text = dutchButtons;
+                    btn.Invalidate();
+                    btn.Update();
+                }
+                else return;
+            }
+        }
+
+        private void frenchBtn_Click(object sender, EventArgs e)
+        {
+            foreach (Label lbl in this.Controls.OfType<Label>())
+            {
+                string dutchText = Translator.Translate(lbl.Text, "en", "fr");
+                lbl.Text = dutchText;
+                lbl.Invalidate();
+                lbl.Update();
+            }
+            foreach (Button btn in this.Controls.OfType<Button>())
+            {
+                if (btn.Text.Length > 0)
+                {
+                    string dutchButtons = Translator.Translate(btn.Text, "en", "fr");
+                    btn.Text = dutchButtons;
+                    btn.Invalidate();
+                    btn.Update();
+                }
+                else return;
+            }
+        }
     }
 }
