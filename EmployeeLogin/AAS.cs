@@ -17,6 +17,10 @@ namespace EmployeeLogin
         {
             InitializeComponent();
         }
+        if(Dutch == true)
+        {
+
+        }
 
         private void bckBtn_Click(object sender, EventArgs e)
         {

@@ -19,6 +19,15 @@ namespace EmployeeLogin
         {
             InitializeComponent();
         }
+        public class Language 
+        {
+        }
+        bool English = true;
+        bool Dutch = false;
+        bool German = false;
+        bool Spanish = false;
+        bool French = false;
+        
 
         SQLiteConnection con = new SQLiteConnection(Functions.pathToDB());
         //SQLiteConnection con = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
@@ -88,6 +97,8 @@ namespace EmployeeLogin
 
         private void dutchBtn_Click(object sender, EventArgs e)
         {
+            English = false;
+            Dutch = true;
             foreach (Label lbl in this.Controls.OfType<Label>())
             {
                 string dutchText = Translator.Translate(lbl.Text, "en", "nl");
@@ -110,6 +121,8 @@ namespace EmployeeLogin
 
         private void germanBtn_Click(object sender, EventArgs e)
         {
+            English = false;
+            German = true;
             foreach (Label lbl in this.Controls.OfType<Label>())
             {
                 string dutchText = Translator.Translate(lbl.Text, "en", "de");
@@ -132,6 +145,9 @@ namespace EmployeeLogin
 
         private void spanishBtn_Click(object sender, EventArgs e)
         {
+            Spanish = true;
+            English = false;
+
             foreach (Label lbl in this.Controls.OfType<Label>())
             {
                 string dutchText = Translator.Translate(lbl.Text, "en", "es");
@@ -154,6 +170,8 @@ namespace EmployeeLogin
 
         private void frenchBtn_Click(object sender, EventArgs e)
         {
+            French = true;
+            English = false;
             foreach (Label lbl in this.Controls.OfType<Label>())
             {
                 string dutchText = Translator.Translate(lbl.Text, "en", "fr");
