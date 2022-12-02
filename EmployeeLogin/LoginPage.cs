@@ -99,10 +99,10 @@ namespace EmployeeLogin
             {
                 if (btn.Text.Length > 0)
                 {
-                    string dutchbuttons = Translator.Translate(btn.Text, "en", "nl");
-                    btn.Text = dutchbuttons;
-                    btn.Invalidate();
-                    btn.Update();
+                string dutchButtons = Translator.Translate(btn.Text, "en", "nl");
+                btn.Text = dutchButtons;
+                btn.Invalidate();
+                btn.Update();
                 }
                 else return; 
             }

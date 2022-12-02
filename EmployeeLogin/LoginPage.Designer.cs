@@ -46,14 +46,14 @@ namespace EmployeeLogin
             // 
             this.txt_username.Location = new System.Drawing.Point(307, 159);
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(195, 26);
+            this.txt_username.Size = new System.Drawing.Size(211, 26);
             this.txt_username.TabIndex = 0;
             // 
             // txt_password
             // 
             this.txt_password.Location = new System.Drawing.Point(307, 237);
             this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(195, 26);
+            this.txt_password.Size = new System.Drawing.Size(211, 26);
             this.txt_password.TabIndex = 1;
             this.txt_password.UseSystemPasswordChar = true;
             // 
@@ -88,9 +88,9 @@ namespace EmployeeLogin
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(427, 288);
+            this.loginBtn.Location = new System.Drawing.Point(420, 288);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(75, 33);
+            this.loginBtn.Size = new System.Drawing.Size(98, 33);
             this.loginBtn.TabIndex = 5;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@ namespace EmployeeLogin
             // 
             this.clrBtn.Location = new System.Drawing.Point(307, 288);
             this.clrBtn.Name = "clrBtn";
-            this.clrBtn.Size = new System.Drawing.Size(75, 33);
+            this.clrBtn.Size = new System.Drawing.Size(98, 33);
             this.clrBtn.TabIndex = 6;
             this.clrBtn.Text = "Clear";
             this.clrBtn.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@ namespace EmployeeLogin
             // 
             this.extBtn.Location = new System.Drawing.Point(12, 405);
             this.extBtn.Name = "extBtn";
-            this.extBtn.Size = new System.Drawing.Size(75, 33);
+            this.extBtn.Size = new System.Drawing.Size(89, 33);
             this.extBtn.TabIndex = 7;
             this.extBtn.Text = "Exit";
             this.extBtn.UseVisualStyleBackColor = true;
@@ -118,11 +118,13 @@ namespace EmployeeLogin
             // 
             // dutchBtn
             // 
+            this.dutchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dutchBtn.Image = global::EmployeeLogin.Properties.Resources.dutch_flag_medium;
-            this.dutchBtn.Location = new System.Drawing.Point(681, 12);
+            this.dutchBtn.Location = new System.Drawing.Point(723, 12);
             this.dutchBtn.Name = "dutchBtn";
-            this.dutchBtn.Size = new System.Drawing.Size(107, 65);
+            this.dutchBtn.Size = new System.Drawing.Size(65, 49);
             this.dutchBtn.TabIndex = 8;
+            this.dutchBtn.Text = ".";
             this.dutchBtn.UseVisualStyleBackColor = true;
             this.dutchBtn.Click += new System.EventHandler(this.dutchBtn_Click);
             // 
