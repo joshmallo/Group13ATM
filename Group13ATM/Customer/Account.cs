@@ -1,7 +1,7 @@
 ﻿
 internal class Account
 {
-    private int balance;
+    private double balance;
     private bool activated;
 
     public Account()
@@ -15,6 +15,6 @@ internal class Account
         this.activated = true;
     } 
 
-    public int Balance { get => balance; set => balance = value; }
+    public double Balance { get => balance; set => balance = value; }
     public bool Activated { get => activated; set => activated = value; }
 }
