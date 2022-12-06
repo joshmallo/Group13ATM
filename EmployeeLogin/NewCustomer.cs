@@ -25,7 +25,7 @@ namespace EmployeeLogin
         }
         private void showBtn_Click(object sender, EventArgs e)
         {
-            SQLiteConnection con = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
+            SQLiteConnection con = new SQLiteConnection(Functions.pathToDB());
             con.Open();
 
             string querry = "SELECT * from Customer";
@@ -35,6 +35,7 @@ namespace EmployeeLogin
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
             adapter.Fill(dt);
             customerDataView.DataSource = dt;
+            con.Close();
         }
         private void createAccountBtn_Click(object sender, EventArgs e)
         {
@@ -63,11 +64,19 @@ namespace EmployeeLogin
             {
                 if(n != accountNum)
                 {
-                    String sqlcmd = "INSERT INTO Customer(AccountNum, Firstname, Lastname, PIN, Age, Address, Salary, Overdraft) VALUES ('" + accountNum + "', '" + firstname + "', '" + lastname + "', '" + pin + "', '" + age + "', '" + address + "', '" + salary + "', '"+overdraft+"')";
+                    String sqlcmd = "INSERT INTO Customer(AccountNum, Firstname, Lastname, PIN, Age, Address, Salary, Overdraft) VALUES ('" +accountNum+ "', '" +firstname+ "', '" +lastname+ "', '" +pin+ "', '" + age + "', '" +address+ "', '" +salary+ "', '"+overdraft+"')";
                     SQLiteCommand sda = new SQLiteCommand(sqlcmd, con);
-                    sda.ExecuteNonQuery();
+                    try 
+                    {
+                        sda.ExecuteNonQuery();
+                    }
+                    catch (Exception)
+                    {
+                        continue;
+                    }
                     MessageBox.Show("Account successfully created!", " ", MessageBoxButtons.OK);
                 }
+                //System.Data.SQLite.SQLiteException
                 else
                 {
                     MessageBox.Show("Account number already in use", " ", MessageBoxButtons.OK);
