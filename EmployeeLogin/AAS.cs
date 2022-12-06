@@ -17,18 +17,23 @@ namespace EmployeeLogin
         public AAS()
         {
             InitializeComponent();
+            Run();
         }
-        /*public void Run()
+        public void Run()
         {
 
-            if (EmpLogin.instance.Dutch == true)
+            if (EmpLogin.instance.Language == "Dutch")
             {
                 foreach (Label lbl in this.Controls.OfType<Label>())
                 {
-                    string dutchText = Translator.Translate(lbl.Text, "en", "nl");
-                    lbl.Text = dutchText;
-                    lbl.Invalidate();
-                    lbl.Update();
+                    if (lbl.Text.Length > 0)
+                    {
+                        string dutchText = Translator.Translate(lbl.Text, "en", "nl");
+                        lbl.Text = dutchText;
+                        lbl.Invalidate();
+                        lbl.Update();
+                    }
+                    else return;
                 }
                 foreach (Button btn in this.Controls.OfType<Button>())
                 {
@@ -42,14 +47,18 @@ namespace EmployeeLogin
                     else return;
                 }
             }
-            else if (EmpLogin.instance.German == true)
+            else if (EmpLogin.instance.Language == "German")
             {
                 foreach (Label lbl in this.Controls.OfType<Label>())
                 {
-                    string germanText = Translator.Translate(lbl.Text, "en", "de");
-                    lbl.Text = germanText;
-                    lbl.Invalidate();
-                    lbl.Update();
+                    if (lbl.Text.Length > 0)
+                    {
+                        string germanText = Translator.Translate(lbl.Text, "en", "de");
+                        lbl.Text = germanText;
+                        lbl.Invalidate();
+                        lbl.Update();
+                    }
+                    else return;
                 }
                 foreach (Button btn in this.Controls.OfType<Button>())
                 {
@@ -63,14 +72,18 @@ namespace EmployeeLogin
                     else return;
                 }
             }
-            else if (EmpLogin.instance.Spanish == true)
+            else if (EmpLogin.instance.Language == "Spanish")
             {
                 foreach (Label lbl in this.Controls.OfType<Label>())
                 {
-                    string spanishText = Translator.Translate(lbl.Text, "en", "es");
-                    lbl.Text = spanishText;
-                    lbl.Invalidate();
-                    lbl.Update();
+                    if (lbl.Text.Length > 0)
+                    {
+                        string spanishText = Translator.Translate(lbl.Text, "en", "es");
+                        lbl.Text = spanishText;
+                        lbl.Invalidate();
+                        lbl.Update();
+                    }
+                    else return;
                 }
                 foreach (Button btn in this.Controls.OfType<Button>())
                 {
@@ -84,14 +97,18 @@ namespace EmployeeLogin
                     else return;
                 }
             }
-            else if (EmpLogin.instance.French == true)
+            else if (EmpLogin.instance.Language == "French")
             {
                 foreach (Label lbl in this.Controls.OfType<Label>())
                 {
-                    string frenchText = Translator.Translate(lbl.Text, "en", "fr");
-                    lbl.Text = frenchText;
-                    lbl.Invalidate();
-                    lbl.Update();
+                    if (lbl.Text.Length > 0)
+                    {
+                        string frenchText = Translator.Translate(lbl.Text, "en", "fr");
+                        lbl.Text = frenchText;
+                        lbl.Invalidate();
+                        lbl.Update();
+                    }
+                    else return;
                 }
                 foreach (Button btn in this.Controls.OfType<Button>())
                 {
@@ -106,7 +123,7 @@ namespace EmployeeLogin
                 }
             }
             else return;
-        }*/
+        }
         private void bckBtn_Click(object sender, EventArgs e)
         {
             EmpLogin loginpg = new EmpLogin();
