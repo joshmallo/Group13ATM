@@ -25,7 +25,7 @@ namespace EmployeeLogin
         }
         private void showBtn_Click(object sender, EventArgs e)
         {
-            SQLiteConnection con = new SQLiteConnection(@"data source=C:\Users\USER\Desktop\Year2SHU\IntroToSoft\Project\Group13ATM\Databases\Employee.db");
+            SQLiteConnection con = new SQLiteConnection(Functions.pathToDB());
             con.Open();
 
             string querry = "SELECT * from Customer";
@@ -35,6 +35,7 @@ namespace EmployeeLogin
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
             adapter.Fill(dt);
             customerDataView.DataSource = dt;
+            con.Close();
         }
         private void createAccountBtn_Click(object sender, EventArgs e)
         {
@@ -56,6 +57,7 @@ namespace EmployeeLogin
             DataTable dt = new DataTable();
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
             adapter.Fill(dt);
+            con.Close();
 
             List<string> accountNumbers = dt.AsEnumerable().Select(x => x[0].ToString()).ToList();
 
@@ -63,10 +65,12 @@ namespace EmployeeLogin
             {
                 if(n != accountNum)
                 {
-                    String sqlcmd = "INSERT INTO Customer(AccountNum, Firstname, Lastname, PIN, Age, Address, Salary, Overdraft) VALUES ('" + accountNum + "', '" + firstname + "', '" + lastname + "', '" + pin + "', '" + age + "', '" + address + "', '" + salary + "', '"+overdraft+"')";
+                    con.Open();
+                    String sqlcmd = "INSERT INTO Customer(AccountNum, Firstname, Lastname, PIN, Age, Address, Salary, Overdraft) VALUES ('" +Convert.ToInt32(accountNum)+ "', '" +firstname+ "', '" +lastname+ "', '" +Convert.ToInt32(pin)+ "', '" + Convert.ToInt32(age) + "', '" +address+ "', '" +Convert.ToInt32(salary)+ "', '"+Convert.ToInt32(overdraft)+"')";
                     SQLiteCommand sda = new SQLiteCommand(sqlcmd, con);
                     sda.ExecuteNonQuery();
                     MessageBox.Show("Account successfully created!", " ", MessageBoxButtons.OK);
+                    con.Close();
                 }
                 else
                 {
@@ -74,7 +78,6 @@ namespace EmployeeLogin
                     txt_accountNumber.Clear();
                 }
             }
-            con.Close();
         }
     }
 }
