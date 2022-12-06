@@ -20,7 +20,8 @@ namespace EmployeeLogin
         }
         /*public void Run()
         {
-            if (EmpLogin.Dutch == true)
+
+            if (EmpLogin.instance.Dutch == true)
             {
                 foreach (Label lbl in this.Controls.OfType<Label>())
                 {
@@ -41,7 +42,7 @@ namespace EmployeeLogin
                     else return;
                 }
             }
-            else if (EmpLogin.German == true)
+            else if (EmpLogin.instance.German == true)
             {
                 foreach (Label lbl in this.Controls.OfType<Label>())
                 {
@@ -62,7 +63,7 @@ namespace EmployeeLogin
                     else return;
                 }
             }
-            else if (EmpLogin.Spanish == true)
+            else if (EmpLogin.instance.Spanish == true)
             {
                 foreach (Label lbl in this.Controls.OfType<Label>())
                 {
@@ -83,7 +84,7 @@ namespace EmployeeLogin
                     else return;
                 }
             }
-            else if (EmpLogin.French == true)
+            else if (EmpLogin.instance.French == true)
             {
                 foreach (Label lbl in this.Controls.OfType<Label>())
                 {

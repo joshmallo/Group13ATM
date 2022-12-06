@@ -15,16 +15,24 @@ namespace EmployeeLogin
 {
     public partial class EmpLogin : Form
     {
+        public static EmpLogin instance;
         public EmpLogin()
         {
             InitializeComponent();
+            instance = this;
         }
 
-        public static bool Dutch = false;
+        public bool Dutch = false;
+        public bool German = false;
+        public bool Spanish = false;
+        public bool French = false;
+        public bool English = true;
+
+        /*public static bool Dutch = false;
         public static bool German = false;
         public static bool Spanish = false;
         public static bool French = false;
-        public static bool English = true;
+        public static bool English = true;*/
 
 
         SQLiteConnection con = new SQLiteConnection(Functions.pathToDB());
@@ -95,8 +103,8 @@ namespace EmployeeLogin
 
         private void dutchBtn_Click(object sender, EventArgs e)
         {
-            EmpLogin.English = false;
-            EmpLogin.Dutch = true;
+            EmpLogin.instance.English = false;
+            EmpLogin.instance.Dutch = true;
             foreach (Label lbl in this.Controls.OfType<Label>())
             {
                 string dutchText = Translator.Translate(lbl.Text, "en", "nl");
@@ -119,8 +127,8 @@ namespace EmployeeLogin
 
         private void germanBtn_Click(object sender, EventArgs e)
         {
-            EmpLogin.English = false;
-            EmpLogin.German = true;
+            EmpLogin.instance.English = false;
+            EmpLogin.instance.German = true;
             foreach (Label lbl in this.Controls.OfType<Label>())
             {
                 string dutchText = Translator.Translate(lbl.Text, "en", "de");
@@ -143,8 +151,8 @@ namespace EmployeeLogin
 
         private void spanishBtn_Click(object sender, EventArgs e)
         {
-            EmpLogin.Spanish = true;
-            EmpLogin.English = false;
+            EmpLogin.instance.Spanish = true;
+            EmpLogin.instance.English = false;
 
             foreach (Label lbl in this.Controls.OfType<Label>())
             {
@@ -168,8 +176,8 @@ namespace EmployeeLogin
 
         private void frenchBtn_Click(object sender, EventArgs e)
         {
-            EmpLogin.French = true;
-            EmpLogin.English = false;
+            EmpLogin.instance.French = true;
+            EmpLogin.instance.English = false;
             foreach (Label lbl in this.Controls.OfType<Label>())
             {
                 string dutchText = Translator.Translate(lbl.Text, "en", "fr");

@@ -57,7 +57,6 @@ namespace EmployeeLogin
             DataTable dt = new DataTable();
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
             adapter.Fill(dt);
-            con.Close();
 
             List<string> accountNumbers = dt.AsEnumerable().Select(x => x[0].ToString()).ToList();
 
@@ -65,19 +64,26 @@ namespace EmployeeLogin
             {
                 if(n != accountNum)
                 {
-                    con.Open();
-                    String sqlcmd = "INSERT INTO Customer(AccountNum, Firstname, Lastname, PIN, Age, Address, Salary, Overdraft) VALUES ('" +Convert.ToInt32(accountNum)+ "', '" +firstname+ "', '" +lastname+ "', '" +Convert.ToInt32(pin)+ "', '" + Convert.ToInt32(age) + "', '" +address+ "', '" +Convert.ToInt32(salary)+ "', '"+Convert.ToInt32(overdraft)+"')";
+                    String sqlcmd = "INSERT INTO Customer(AccountNum, Firstname, Lastname, PIN, Age, Address, Salary, Overdraft) VALUES ('" +accountNum+ "', '" +firstname+ "', '" +lastname+ "', '" +pin+ "', '" + age + "', '" +address+ "', '" +salary+ "', '"+overdraft+"')";
                     SQLiteCommand sda = new SQLiteCommand(sqlcmd, con);
-                    sda.ExecuteNonQuery();
+                    try 
+                    {
+                        sda.ExecuteNonQuery();
+                    }
+                    catch (Exception)
+                    {
+                        continue;
+                    }
                     MessageBox.Show("Account successfully created!", " ", MessageBoxButtons.OK);
-                    con.Close();
                 }
+                //System.Data.SQLite.SQLiteException
                 else
                 {
                     MessageBox.Show("Account number already in use", " ", MessageBoxButtons.OK);
                     txt_accountNumber.Clear();
                 }
             }
+            con.Close();
         }
     }
 }
