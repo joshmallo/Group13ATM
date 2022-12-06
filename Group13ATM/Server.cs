@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Group13ATM
 {
-    internal static class Server
+    public static class Server
     {
+        public static void WithdrawCash(Account account, double amount)
+        {
+            // when cash is withdrawn
+        }
+
+        public static void Transfer(Account transferFrom, Account transferTo, double amount)
+        {
+            // transfer between accounts
+        }
     }
 }
