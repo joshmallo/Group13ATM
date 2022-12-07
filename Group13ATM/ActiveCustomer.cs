@@ -20,15 +20,13 @@ static class ActiveCustomer
         if (customers.CustomerList.Any(x => x.AccountNumber == accNum))
         {
             active = customers.CustomerList.FirstOrDefault(x => x.AccountNumber == accNum);
-            active.CurrentAccount         = customers.FindAccount("c");
-            active.SimpleDepositAccount   = customers.FindAccount("s");
-            active.LongTermDepositAccount = customers.FindAccount("l");
+            SetAccounts();
             return true;
         }
         else return false;
     }
 
-    static bool Withdraw(string accountType, double amount)
+    public static bool Withdraw(string accountType, double amount)
     {
         if (accountType == "simple")
         {
@@ -54,7 +52,7 @@ static class ActiveCustomer
             }
         }
         }
-    static bool Transfer(string accountFrom, string accountTo, double amount)
+    public static bool Transfer(string accountFrom, string accountTo, double amount)
     {
         if(accountFrom == "simple")
         {
@@ -110,65 +108,103 @@ static class ActiveCustomer
         }
     }
 
-    static void Update()
+    public static void Update()
     {
+        //need to update transactions and accounts
 
         using (SqlConnection con = new SqlConnection(Functions.pathToDB()))
         using (SqlCommand command = con.CreateCommand())
         {
-            command.CommandText = "UPDATE Customer SET AccounNum = @an, Firstname = @fn" +
-                " Lastname = @ln PIN = @p Address = @add Age = @a Salary = @as Overdraft = @o) ";
+            command.CommandText = "UPDATE Accounts_@num (SET AccountNum = @bal) WHERE AccountType = current ";
 
+            command.Parameters.AddWithValue("@num", active.AccountNumber);
+            command.Parameters.AddWithValue("@bal", active.CurrentAccount.Balance);
+          
+            con.Open();
+            command.ExecuteNonQuery();
+            con.Close();
+        }
+        using (SqlConnection con = new SqlConnection(Functions.pathToDB()))
+        using (SqlCommand command = con.CreateCommand())
+        {
+            command.CommandText = "UPDATE Accounts_@num (SET AccountNum = @bal) WHERE AccountType = simple";
 
-            command.Parameters.AddWithValue("@an", active.AccountNumber);
-            command.Parameters.AddWithValue("@fn", active.FirstName);
-            command.Parameters.AddWithValue("@ln", active.LastName);
-            command.Parameters.AddWithValue("@p", active.Pin);
-            command.Parameters.AddWithValue("@add", active.Address);
-            command.Parameters.AddWithValue("@a", active.Age);
-            command.Parameters.AddWithValue("@as", active.AnnualSalary);
-            command.Parameters.AddWithValue("@o", active.Overdraft);
+            command.Parameters.AddWithValue("@num", active.AccountNumber);
+            command.Parameters.AddWithValue("@bal", active.SimpleDepositAccount.Balance);
+
+            con.Open();
+            command.ExecuteNonQuery();
+            con.Close();
+        }
+        using (SqlConnection con = new SqlConnection(Functions.pathToDB()))
+        using (SqlCommand command = con.CreateCommand())
+        {
+            command.CommandText = "UPDATE Accounts_@num (SET AccountNum = @bal) WHERE AccountType = long ";
+
+            command.Parameters.AddWithValue("@num", active.AccountNumber);
+            command.Parameters.AddWithValue("@bal", active.LongTermDepositAccount.Balance);
+
             con.Open();
             command.ExecuteNonQuery();
             con.Close();
         }
 
-        List<string> accountTypes = new List<string>()
-        {
-            "CurrentAccount",
-            "SimpleDepositAccount",
-            "LongTermDeposit"
-        };
-        foreach (string accountType in accountTypes)
-        {
-            using (SqlConnection con = new SqlConnection(Functions.pathToDB()))
-            using (SqlCommand command = con.CreateCommand())
-            {
-                command.CommandText = "UPDATE @at SET Balance = @b, Activated = @a";
+        
+        //do transactions
+    }
 
-                command.Parameters.AddWithValue("@at", accountType);
-                if (accountType == "CurrentAccount")
-                {
-                    command.Parameters.AddWithValue("@b", active.CurrentAccount.Balance);
-                    command.Parameters.AddWithValue("@a", active.CurrentAccount.Activated);
-                }
-                else if (accountType == "SimpleDepositAccount")
-                {
-                    command.Parameters.AddWithValue("@b", active.SimpleDepositAccount.Balance);
-                    command.Parameters.AddWithValue("@a", active.SimpleDepositAccount.Activated);
-                }
-                else
-                {
-                    command.Parameters.AddWithValue("@b", active.LongTermDepositAccount.Balance);
-                    command.Parameters.AddWithValue("@a", active.LongTermDepositAccount.Activated);
-                }
-                
+    static void SetAccounts()
+    {
+        SQLiteConnection con = new SQLiteConnection(Functions.pathToDB());
+        con.Open();
 
-                con.Open();
-                command.ExecuteNonQuery();
-                con.Close();
-            }
+
+        string query = "IF EXISTS (SELECT * from Accounts_" + active.AccountNumber + " WHERE AccountType = current";
+        SQLiteCommand cmd = new SQLiteCommand(query, con);
+
+        DataTable dt = new DataTable();
+        SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+        adapter.Fill(dt);
+
+        string query1 = "SELECT * from Customers WHERE account";
+        SQLiteCommand cmd1 = new SQLiteCommand(query, con);
+
+        DataTable dt1 = new DataTable();
+        SQLiteDataAdapter adapter1 = new SQLiteDataAdapter(cmd);
+        adapter.Fill(dt1);
+
+        string query2 = "SELECT * from Customers WHERE account";
+        SQLiteCommand cmd2 = new SQLiteCommand(query, con);
+
+        DataTable dt2 = new DataTable();
+        SQLiteDataAdapter adapter2 = new SQLiteDataAdapter(cmd);
+        adapter.Fill(dt2);
+        con.Close();
+
+        List<string> cAccount = dt.AsEnumerable().Select(x => x.ToString()).ToList();
+        foreach (string account in cAccount)
+        {
+            List<string> list = account.Split().ToList();
+            if (dt != null) active.CurrentAccount = new Acc(int.Parse(list[1]), int.Parse(list[2]));
         }
+
+        List<string> sAccount = dt.AsEnumerable().Select(x => x.ToString()).ToList();
+        foreach (string account in sAccount)
+        {
+            List<string> list = account.Split().ToList();
+            if (dt != null) active.SimpleDepositAccount = new Acc(int.Parse(list[1]), int.Parse(list[2]));
+        }
+        List<string> lAccount = dt.AsEnumerable().Select(x => x.ToString()).ToList();
+        foreach (string account in lAccount)
+        {
+            List<string> list = account.Split().ToList();
+            if (dt != null) active.SimpleDepositAccount = new Acc(int.Parse(list[1]), int.Parse(list[2]));
+        }
+    }
+
+    static void GetTransactions()
+    {
+        ////////
     }
 
     internal static Customer Active { get => active; set => active = value; }

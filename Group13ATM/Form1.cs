@@ -11,6 +11,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace Group13ATM
 {
@@ -43,10 +44,41 @@ namespace Group13ATM
 
         private void insertCardBut_Click(object sender, EventArgs e)
         {
+
             Clear();
+            currentUser = Server.FetchUser(int.Parse(cardNumberInput.Text));
             enterPinScreen.Visible = true;
             log.Items.Add("Card inserted.");
             cardNumberInput.Enabled = false;
+            /*SQLiteConnection con = new SQLiteConnection(Functions.pathToDB());
+            con.Open();
+
+            try
+            {
+                String querry = "SELECT * FROM Customer WHERE AccountNum = '" + cardNumberInput.Text + "'";
+                SQLiteDataAdapter sda = new SQLiteDataAdapter(querry, con);
+
+                DataTable dtable = new DataTable();
+                sda.Fill(dtable);
+                
+
+                if (dtable.Rows.Count > 0)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("incorrect account number or pin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+            finally
+            {
+                con.Close();
+            }*/
         }
 
         void numPadPressed(int num)
@@ -154,15 +186,15 @@ namespace Group13ATM
 
             if (enterPinScreen.Visible && pinInput.TextLength == 4)
             {
-                pinInput.Text = "";
-                if (true) // if PIN is correct
+                //pinInput.Text = "";
+                if (int.Parse(pinInput.Text) == currentUser.pin) // if PIN is correct
                 {
-                    { // for testing
+/*                    { // for testing
                         currentUser = new User(new CurrentAccount(22.00), new DepositAccount(10.0), null);
                         currentUser.currentAccount.AddTransaction(new Transaction(currentUser.currentAccount, "12:00 06/12/2022", 10, 200, 210, true));
                         currentUser.currentAccount.AddTransaction(new Transaction(currentUser.currentAccount, "14:00 06/12/2022", 300, 200, 200, false));
                         //currentUser.accounts.Add(new Account("Long-term Account"));
-                    }
+                    }*/
                     incorrectPins = 0;
                     incorrectPinLabel.Visible = false;
                     Clear();

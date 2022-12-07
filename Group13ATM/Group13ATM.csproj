@@ -86,7 +86,7 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="CurrentAccount.cs" />
-    <Compile Include="Customer\Account.cs" />
+    <Compile Include="Customer\Acc.cs" />
     <Compile Include="ActiveCustomer.cs" />
     <Compile Include="Customer\Customer.cs" />
     <Compile Include="Customer\Customers.cs" />
