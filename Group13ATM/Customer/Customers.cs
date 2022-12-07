@@ -31,10 +31,8 @@ class Customers
         }
     }
 
-    public Account FindAccount(string accountType)
-    {
-        return new Account();
-    }
+    
+
 
     internal List<Customer> CustomerList { get => customerList; set => customerList = value; }
 }

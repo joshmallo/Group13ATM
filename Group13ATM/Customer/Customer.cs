@@ -1,12 +1,12 @@
-﻿
+﻿using Group13ATM;
 
 using System.Collections.Generic;
 
 class Customer
 {
-    private Account currentAccount;
-    private Account simpleDepositAccount;
-    private Account longTermDepositAccount;
+    private Acc currentAccount; 
+    private Acc simpleDepositAccount;
+    private Acc longTermDepositAccount;
     private string firstName;
     private string lastName;
     private string address;
@@ -26,9 +26,9 @@ class Customer
         this.Address           = address;
         this.AnnualSalary      = annualSalary;
         this.Overdraft         = overdraft;
-        CurrentAccount         = new Account();
-        SimpleDepositAccount   = new Account();
-        LongTermDepositAccount = new Account();
+        CurrentAccount         = new Acc();
+        SimpleDepositAccount   = new Acc();
+        LongTermDepositAccount = new Acc();
     }
 
 
@@ -40,8 +40,9 @@ class Customer
     public int AccountNumber { get => accountNumber; set => accountNumber = value; }
     public int Pin { get => pin; set => pin = value; }
     public int Overdraft { get => overdraft; set => overdraft = value; }
-    internal Account CurrentAccount { get => currentAccount; set => currentAccount = value; }
-    internal Account SimpleDepositAccount { get => simpleDepositAccount; set => simpleDepositAccount = value; }
-    internal Account LongTermDepositAccount { get => longTermDepositAccount; set => longTermDepositAccount = value; }
+    
     internal List<Transaction> Transactions { get => transactions; set => transactions = value; }
+    internal Acc CurrentAccount { get => currentAccount; set => currentAccount = value; }
+    internal Acc SimpleDepositAccount { get => simpleDepositAccount; set => simpleDepositAccount = value; }
+    internal Acc LongTermDepositAccount { get => longTermDepositAccount; set => longTermDepositAccount = value; }
 }
