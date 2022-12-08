@@ -54,9 +54,10 @@ namespace EmployeeLogin
             // 
             // showBtn
             // 
-            this.showBtn.Location = new System.Drawing.Point(170, 500);
+            this.showBtn.Location = new System.Drawing.Point(113, 325);
+            this.showBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.showBtn.Name = "showBtn";
-            this.showBtn.Size = new System.Drawing.Size(235, 33);
+            this.showBtn.Size = new System.Drawing.Size(157, 21);
             this.showBtn.TabIndex = 28;
             this.showBtn.Text = "Show Current Accounts >>";
             this.showBtn.UseVisualStyleBackColor = true;
@@ -65,18 +66,20 @@ namespace EmployeeLogin
             // customerDataView
             // 
             this.customerDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerDataView.Location = new System.Drawing.Point(411, 38);
+            this.customerDataView.Location = new System.Drawing.Point(274, 25);
+            this.customerDataView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customerDataView.Name = "customerDataView";
             this.customerDataView.RowHeadersWidth = 62;
             this.customerDataView.RowTemplate.Height = 28;
-            this.customerDataView.Size = new System.Drawing.Size(693, 495);
+            this.customerDataView.Size = new System.Drawing.Size(462, 322);
             this.customerDataView.TabIndex = 27;
             // 
             // backBtn
             // 
-            this.backBtn.Location = new System.Drawing.Point(11, 500);
+            this.backBtn.Location = new System.Drawing.Point(7, 325);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(75, 33);
+            this.backBtn.Size = new System.Drawing.Size(50, 21);
             this.backBtn.TabIndex = 26;
             this.backBtn.Text = "<< Back";
             this.backBtn.UseVisualStyleBackColor = true;
@@ -84,25 +87,28 @@ namespace EmployeeLogin
             // 
             // txt_accountNumber
             // 
-            this.txt_accountNumber.Location = new System.Drawing.Point(11, 224);
+            this.txt_accountNumber.Location = new System.Drawing.Point(7, 146);
+            this.txt_accountNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_accountNumber.Name = "txt_accountNumber";
-            this.txt_accountNumber.Size = new System.Drawing.Size(172, 26);
+            this.txt_accountNumber.Size = new System.Drawing.Size(116, 20);
             this.txt_accountNumber.TabIndex = 25;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 201);
+            this.label5.Location = new System.Drawing.Point(5, 131);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 20);
+            this.label5.Size = new System.Drawing.Size(112, 13);
             this.label5.TabIndex = 24;
             this.label5.Text = "New Account Number";
             // 
             // createAccountBtn
             // 
-            this.createAccountBtn.Location = new System.Drawing.Point(233, 436);
+            this.createAccountBtn.Location = new System.Drawing.Point(155, 283);
+            this.createAccountBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.createAccountBtn.Name = "createAccountBtn";
-            this.createAccountBtn.Size = new System.Drawing.Size(172, 58);
+            this.createAccountBtn.Size = new System.Drawing.Size(115, 38);
             this.createAccountBtn.TabIndex = 23;
             this.createAccountBtn.Text = "Create Account";
             this.createAccountBtn.UseVisualStyleBackColor = true;
@@ -110,107 +116,120 @@ namespace EmployeeLogin
             // 
             // txt_lastName
             // 
-            this.txt_lastName.Location = new System.Drawing.Point(11, 141);
+            this.txt_lastName.Location = new System.Drawing.Point(7, 92);
+            this.txt_lastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_lastName.Name = "txt_lastName";
-            this.txt_lastName.Size = new System.Drawing.Size(172, 26);
+            this.txt_lastName.Size = new System.Drawing.Size(116, 20);
             this.txt_lastName.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 118);
+            this.label2.Location = new System.Drawing.Point(5, 77);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 17;
             this.label2.Text = "Last Name";
             // 
             // txt_firstName
             // 
-            this.txt_firstName.Location = new System.Drawing.Point(12, 77);
+            this.txt_firstName.Location = new System.Drawing.Point(8, 50);
+            this.txt_firstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_firstName.Name = "txt_firstName";
-            this.txt_firstName.Size = new System.Drawing.Size(172, 26);
+            this.txt_firstName.Size = new System.Drawing.Size(116, 20);
             this.txt_firstName.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 54);
+            this.label1.Location = new System.Drawing.Point(5, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 15;
             this.label1.Text = "First Name";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 272);
+            this.label6.Location = new System.Drawing.Point(5, 177);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(162, 40);
+            this.label6.Size = new System.Drawing.Size(109, 26);
             this.label6.TabIndex = 29;
             this.label6.Text = "Peronal Identification \r\nNumber (PIN)";
             // 
             // txt_PIN
             // 
-            this.txt_PIN.Location = new System.Drawing.Point(12, 315);
+            this.txt_PIN.Location = new System.Drawing.Point(8, 205);
+            this.txt_PIN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_PIN.Name = "txt_PIN";
-            this.txt_PIN.Size = new System.Drawing.Size(172, 26);
+            this.txt_PIN.Size = new System.Drawing.Size(116, 20);
             this.txt_PIN.TabIndex = 30;
             this.txt_PIN.UseSystemPasswordChar = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(208, 54);
+            this.label3.Location = new System.Drawing.Point(139, 35);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 20);
+            this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 31;
             this.label3.Text = "Age";
             // 
             // txt_age
             // 
-            this.txt_age.Location = new System.Drawing.Point(212, 77);
+            this.txt_age.Location = new System.Drawing.Point(141, 50);
+            this.txt_age.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_age.Name = "txt_age";
-            this.txt_age.Size = new System.Drawing.Size(172, 26);
+            this.txt_age.Size = new System.Drawing.Size(116, 20);
             this.txt_age.TabIndex = 32;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(208, 118);
+            this.label4.Location = new System.Drawing.Point(139, 77);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 33;
             this.label4.Text = "Address";
             // 
             // txt_address
             // 
-            this.txt_address.Location = new System.Drawing.Point(212, 141);
+            this.txt_address.Location = new System.Drawing.Point(141, 92);
+            this.txt_address.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(172, 26);
+            this.txt_address.Size = new System.Drawing.Size(116, 20);
             this.txt_address.TabIndex = 34;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(208, 201);
+            this.label7.Location = new System.Drawing.Point(139, 131);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 20);
+            this.label7.Size = new System.Drawing.Size(72, 13);
             this.label7.TabIndex = 35;
             this.label7.Text = "Annual Salary";
             // 
             // txt_salary
             // 
-            this.txt_salary.Location = new System.Drawing.Point(212, 224);
+            this.txt_salary.Location = new System.Drawing.Point(141, 146);
+            this.txt_salary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_salary.Name = "txt_salary";
-            this.txt_salary.Size = new System.Drawing.Size(172, 26);
+            this.txt_salary.Size = new System.Drawing.Size(116, 20);
             this.txt_salary.TabIndex = 36;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(208, 292);
+            this.label8.Location = new System.Drawing.Point(139, 190);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 20);
+            this.label8.Size = new System.Drawing.Size(70, 13);
             this.label8.TabIndex = 37;
             this.label8.Text = "Set Overdraft";
             // 
@@ -221,17 +240,18 @@ namespace EmployeeLogin
             "1000",
             "2000",
             "3000"});
-            this.txt_overdraft.Location = new System.Drawing.Point(211, 315);
+            this.txt_overdraft.Location = new System.Drawing.Point(141, 205);
+            this.txt_overdraft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_overdraft.Name = "txt_overdraft";
-            this.txt_overdraft.Size = new System.Drawing.Size(173, 28);
+            this.txt_overdraft.Size = new System.Drawing.Size(117, 21);
             this.txt_overdraft.TabIndex = 39;
             // 
             // NewCustomer
             // 
             this.AcceptButton = this.createAccountBtn;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 545);
+            this.ClientSize = new System.Drawing.Size(743, 354);
             this.Controls.Add(this.txt_overdraft);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_salary);
@@ -252,8 +272,10 @@ namespace EmployeeLogin
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_firstName);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NewCustomer";
             this.Text = "New Customer Account";
+            this.Load += new System.EventHandler(this.NewCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.customerDataView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

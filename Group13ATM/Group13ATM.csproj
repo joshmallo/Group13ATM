@@ -84,13 +84,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="CurrentAccount.cs" />
     <Compile Include="Customer\Acc.cs" />
     <Compile Include="ActiveCustomer.cs" />
     <Compile Include="Customer\Customer.cs" />
     <Compile Include="Customer\Customers.cs" />
-    <Compile Include="DepositAccount.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,13 +95,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
-    <Compile Include="LongTermAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Server.cs" />
     <Compile Include="Customer\Transaction.cs" />
-    <Compile Include="Transaction.cs" />
-    <Compile Include="User.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

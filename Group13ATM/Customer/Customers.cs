@@ -27,7 +27,7 @@ class Customers
         foreach (string customer in customersData)
         {
             List<string> list = customer.Split().ToList();
-            customerList.Add(new Customer(int.Parse(list[0]), list[1], list[2], int.Parse(list[4]), list[5], int.Parse(list[6]), double.Parse(list[7]), int.Parse(list[8])));
+            customerList.Add(new Customer(Convert.ToInt32(list[0]), list[1], list[2], Convert.ToInt32(list[3]), list[4], Convert.ToInt32(list[5]), Convert.ToDouble(list[6]), Convert.ToBoolean(list[7])));
         }
     }
 

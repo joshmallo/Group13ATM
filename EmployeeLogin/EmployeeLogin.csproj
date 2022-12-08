@@ -186,6 +186,9 @@
     <Content Include="Properties\dutch-flag-medium.jpg" />
     <None Include="Resources\dutch-flag-medium.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OtherCustomer\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

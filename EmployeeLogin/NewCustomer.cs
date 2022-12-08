@@ -85,5 +85,10 @@ namespace EmployeeLogin
             }
             con.Close();
         }
+
+        private void NewCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

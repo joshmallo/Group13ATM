@@ -14,10 +14,10 @@ class Customer
     private int age;
     private int accountNumber;
     private int pin;
-    private int overdraft;
+    private bool cardUsable;
     private List<Transaction> transactions;
 
-    public Customer(int accountNumber, string firstName, string lastName, int pin, string address, int age, double annualSalary, int overdraft = 0)
+    public Customer(int accountNumber, string firstName, string lastName, int pin, string address, int age, double annualSalary, bool cardUsable)
     {
         this.accountNumber     = accountNumber;
         this.FirstName         = firstName;
@@ -25,7 +25,8 @@ class Customer
         this.Age               = age;
         this.Address           = address;
         this.AnnualSalary      = annualSalary;
-        this.Overdraft         = overdraft;
+        this.pin = pin;
+        this.CardUsable = cardUsable;
         CurrentAccount         = new Acc();
         SimpleDepositAccount   = new Acc();
         LongTermDepositAccount = new Acc();
@@ -39,8 +40,7 @@ class Customer
     public int Age { get => age; set => age = value; }
     public int AccountNumber { get => accountNumber; set => accountNumber = value; }
     public int Pin { get => pin; set => pin = value; }
-    public int Overdraft { get => overdraft; set => overdraft = value; }
-    
+    public bool CardUsable { get => cardUsable; set => cardUsable = value; }
     internal List<Transaction> Transactions { get => transactions; set => transactions = value; }
     internal Acc CurrentAccount { get => currentAccount; set => currentAccount = value; }
     internal Acc SimpleDepositAccount { get => simpleDepositAccount; set => simpleDepositAccount = value; }
